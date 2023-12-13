@@ -12,10 +12,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/loader/loader.module').then( m => m.LoaderPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
     path: 'alerts',
     loadChildren: () => import('./pages/alerts/alerts.module').then( m => m.AlertsPageModule)
   },

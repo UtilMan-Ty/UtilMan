@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
     { title: 'Alarms', url: '/pages/Alerts', icon: 'alarm-outline' },
     { title: 'Meters', url: '/pages/Alerts', icon: 'speedometer-outline' },
     { title: 'Products', url: '/pages/Products', icon: 'cart-outline' },
-    { title: 'Services', url: '/pages/Products', icon: '<ion-icon name="globe"></ion-icon>-outline' },
+    { title: 'Services', url: '/pages/Products', icon: 'globe-outline' },
   ];
 
   // Inject AuthService and Router in the constructor
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     this.auth.isAuthenticated$.subscribe((isAuthenticated) => {
       if (isAuthenticated) {
         // User is authenticated, navigate to the main content or home page
-        this.router.navigate(['/main']); // Replace '/main' with your main content route
+        this.router.navigate(['/alerts']); // Replace '/main' with your main content route
       } else {
         // If not authenticated, initiate the Auth0 login
         this.auth.loginWithRedirect();
@@ -33,7 +33,5 @@ export class AppComponent implements OnInit {
   }
 
   // Add a method to handle the logout (if needed)
-  logout() {
-    this.auth.logout({ returnTo: window.location.origin });
-  }
+
 }
