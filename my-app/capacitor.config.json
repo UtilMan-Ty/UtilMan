@@ -1,0 +1,11 @@
+{
+  "appId": "com.archon.app",
+  "appName": "util-man-eu",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

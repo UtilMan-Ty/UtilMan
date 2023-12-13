@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public appPages = [
     { title: 'Alerts', url: '/pages/Alerts', icon: 'alert-circle-outline'},
     { title: 'Alarms', url: '/pages/Alerts', icon: 'alarm-outline' },
@@ -12,6 +15,25 @@ export class AppComponent {
     { title: 'Products', url: '/pages/Products', icon: 'cart-outline' },
     { title: 'Services', url: '/pages/Products', icon: '<ion-icon name="globe"></ion-icon>-outline' },
   ];
-  public labels = [];
-  constructor() {}
+
+  // Inject AuthService and Router in the constructor
+  constructor(private auth: AuthService, private router: Router) {}
+
+  ngOnInit() {
+    // Subscribe to the isAuthenticated$ observable
+    this.auth.isAuthenticated$.subscribe((isAuthenticated) => {
+      if (isAuthenticated) {
+        // User is authenticated, navigate to the main content or home page
+        this.router.navigate(['/main']); // Replace '/main' with your main content route
+      } else {
+        // If not authenticated, initiate the Auth0 login
+        this.auth.loginWithRedirect();
+      }
+    });
+  }
+
+  // Add a method to handle the logout (if needed)
+  logout() {
+    this.auth.logout({ returnTo: window.location.origin });
+  }
 }
