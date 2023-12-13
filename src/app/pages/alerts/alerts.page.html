@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar class="archon-header-fill">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Alerts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+<ion-list class="archon-background">
+  <ion-item class="archon-background">
+    <ion-avatar slot="start" title="User Avatar">
+      <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="User Avatar" />
+    </ion-avatar>
+    <ion-label>
+        <h1>Tyrone B</h1>
+        <p class="white-text">Welcome Back <span class="username"> </span></p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+<app-alert-card 
+  [strAlarmName]="'High Flow'" 
+  [dateTimeTriggered]="parseDateString('01/12/2023')"
+  [strAlarmDescription]="'Alarm has exceeded its threshold of 10kl per day'"
+></app-alert-card>
+
+<app-alert-card></app-alert-card>
+<app-alert-card></app-alert-card>
+<app-alert-card></app-alert-card>
+
+
+</ion-content>

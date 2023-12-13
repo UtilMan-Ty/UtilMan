@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar class="archon-header-fill">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Meters</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+<ion-list class="archon-background">
+  <ion-item class="archon-background">
+    <ion-avatar slot="start" title="User Avatar">
+      <img src="https://previews.123rf.com/images/adambaihaqi/adambaihaqi2105/adambaihaqi210500028/168509434-shopping-place-pin-icon-with-line-style-placeholder-vector-icon.jpg" alt="User Avatar" />
+    </ion-avatar>
+    <ion-label>
+        <h1>Site Name</h1>
+        <p class="white-text"> <span class="numMeters"> </span> 60 Meters </p>
+        <p class="white-text"> <span class="lastReadingDate"> </span> Last Reading: 01/02/2023</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+<app-meter-card
+  [hasAlert]="true"
+  strTenantName="Test Tenant"
+  strMeterNumber="MN-0123"
+  strMeterType="kL"
+  [numLastReading]="500"
+  [numAveReading]="50"
+  [dateLastReadingDate]="parseDateString('01/12/2023')"
+  [numAlerts]="2"
+></app-meter-card>
+
+<app-kva-card></app-kva-card>
+<app-kwh-card></app-kwh-card>
+<app-kwhs-card></app-kwhs-card>
+<app-kwhp-card></app-kwhp-card>
+<app-kwho-card></app-kwho-card>
+<app-kvarh-card></app-kvarh-card>
+
+
+</ion-content>

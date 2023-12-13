@@ -1,0 +1,7 @@
+{
+  "name": "UtilMan-EU",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,24 @@
+ion-card {
+    ion-card-subtitle {
+        text-transform: uppercase;
+        font-weight: bold;
+    };
+    
+    ion-card-content {
+        ion-label p {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    ion-item {
+        padding: 0px;
+        margin-bottom: 0px;
+      }
+    
+      .large-icon {
+        font-size: 2em;
+        margin-right: 10px; /* Adjust the margin as needed */
+        margin-left: -10px;
+        }

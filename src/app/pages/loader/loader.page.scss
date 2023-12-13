@@ -1,0 +1,13 @@
+  /* Center the spinner */
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 100% of the viewport height */
+  }
+
+  /* Make the spinner larger */
+  .larger-spinner ion-spinner {
+    font-size: 6em; /* Adjust the font-size to make it larger */
+    border-bottom: none;
+  }
