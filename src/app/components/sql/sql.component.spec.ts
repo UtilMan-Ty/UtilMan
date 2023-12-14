@@ -2,19 +2,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { YourComponent } from './sql.component'; // Adjust the component name
+import { SqlComponent } from './sql.component'; // Adjust the component name
 
 describe('YourComponent', () => {
-  let component: YourComponent;
-  let fixture: ComponentFixture<YourComponent>;
+  let component: SqlComponent;
+  let fixture: ComponentFixture<SqlComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [YourComponent],
+      declarations: [SqlComponent],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(YourComponent);
+    fixture = TestBed.createComponent(SqlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

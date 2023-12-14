@@ -1,44 +1,34 @@
 // sql.component.ts
+
 import { Component, OnInit } from '@angular/core';
-import { YourDataService } from '../../api.service';
+import { SqlService } from '../../services/sql.service';
 
 @Component({
-  selector: 'app-your-component',
-  templateUrl: './your-component.component.html',
-  styleUrls: ['./your-component.component.scss'],
+  selector: 'app-sql',
+  templateUrl: './sql.component.html',
+  styleUrls: ['./sql.component.scss'],
 })
-export class YourComponent implements OnInit {
-  data: any[] = [];
-  distinctMeterIds: any[] = [];
+export class SqlComponent implements OnInit {
+  distinctMeterIds: string[] = [];
 
-  constructor(private dataService: YourDataService) {}
+  constructor(private sqlService: SqlService) {}
 
   ngOnInit(): void {
-    this.loadData();
-    this.loadDistinctMeterIds();
+    this.fetchAllMeterIds();
   }
 
-  loadData(): void {
-    this.dataService.getData().subscribe(
-      (result) => {
-        this.data = result;
-      },
-      (error) => {
-        console.error('Error fetching data:', error);
-      }
-    );
+  fetchAllMeterIds(): void {
+    this.sqlService.getAllMeterIds().subscribe((data) => {
+      this.distinctMeterIds = data;
+    });
   }
 
-  loadDistinctMeterIds(): void {
-    this.dataService.getDistinctMeterIds().subscribe(
-      (result) => {
-        this.distinctMeterIds = result;
-      },
-      (error) => {
-        console.error('Error fetching distinct meter IDs:', error);
-      }
-    );
+  fetchDataLast24Hours(meterId: string): void {
+    this.sqlService.fetchDataLast24Hours(meterId).subscribe((data) => {
+      console.log('Data Last 24 Hours:', data);
+      // Handle the data as needed
+    });
   }
 
-  // Add methods to load data for other endpoints as needed
+  // Add similar methods for other functionality
 }

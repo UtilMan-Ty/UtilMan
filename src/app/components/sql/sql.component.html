@@ -1,21 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Your Component
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div>
+  <!-- Update the method name here -->
+  <button (click)="fetchAllMeterIds()">Get All MeterIds</button>
+</div>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of data">
-      {{ item.propertyName }} <!-- Update this with your actual property names -->
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-item *ngFor="let meterId of distinctMeterIds">
-      {{ meterId }}
-    </ion-item>
-  </ion-list>
-</ion-content>
+<button (click)="fetchAllMeterIds()">Get All MeterIds</button>
+<button (click)="fetchDataLast24Hours('4C475A67242CF163')">Get Data Last 24 Hours</button>

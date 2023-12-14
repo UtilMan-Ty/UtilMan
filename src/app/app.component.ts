@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   public appPages = [
-    { title: 'Alerts', url: '/pages/Alerts', icon: 'alert-circle-outline'},
-    { title: 'Alarms', url: '/pages/Alerts', icon: 'alarm-outline' },
-    { title: 'Meters', url: '/pages/Alerts', icon: 'speedometer-outline' },
-    { title: 'Products', url: '/pages/Products', icon: 'cart-outline' },
-    { title: 'Services', url: '/pages/Products', icon: 'globe-outline' },
+    { title: 'Alerts', url: '/alerts', icon: 'alert-circle'},
+    { title: 'Alarms', url: '/alarm', icon: 'alarm' },
+    { title: 'Meters', url: '/meters', icon: 'speedometer' },
+    //{ title: 'Products', url: '/Products', icon: 'cart-outline' },
+    //{ title: 'Services', url: '/Products', icon: 'globe-outline' },
   ];
 
   // Inject AuthService and Router in the constructor

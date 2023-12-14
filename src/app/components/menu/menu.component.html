@@ -1,0 +1,14 @@
+<!-- app-menu.component.html -->
+<ion-content>
+    <ion-list id="inbox-list">
+      <ion-list-header>Utility Management</ion-list-header>
+      <ion-note>User Email here</ion-note>
+  
+      <ion-menu-toggle auto-hide="false" *ngFor="let item of menuItems; let i = index">
+        <ion-item routerDirection="root" [routerLink]="[item.url]" lines="none" detail="false" routerLinkActive="selected">
+          <ion-icon aria-hidden="true" slot="start" [name]="item.icon + '-outline'"></ion-icon>
+          <ion-label>{{ item.title }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
