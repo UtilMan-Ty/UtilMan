@@ -8,6 +8,7 @@ import { AlertsPageRoutingModule } from './alerts-routing.module';
 
 import { AlertsPage } from './alerts.page';
 import { AlertCardComponent } from 'src/app/components/alert-card/alert-card.component';
+import {UserProfileComponent} from './user-profile-info'
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { AlertCardComponent } from 'src/app/components/alert-card/alert-card.com
     IonicModule,
     AlertsPageRoutingModule
   ],
-  declarations: [AlertsPage, AlertCardComponent]
+  declarations: [AlertsPage, AlertCardComponent, UserProfileComponent]
 })
 export class AlertsPageModule {}
