@@ -11,7 +11,7 @@ export class LoaderPage implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
-      this.router.navigate([]);
+    this.router.navigate(['/alerts']);
     }
   }
 

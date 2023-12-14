@@ -26,7 +26,7 @@ describe('LoaderPage', () => {
     spyOn(router, 'navigate');
   component.ngOnInit
 
-  expect(router.navigate).toHaveBeenCalledWith(['login'])}
+  expect(router.navigate).toHaveBeenCalledWith(['alerts'])}
   );
 
   it('should create', () => {
