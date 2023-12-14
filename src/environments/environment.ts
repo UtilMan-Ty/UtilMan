@@ -8,7 +8,7 @@ export const environment = {
     domain: 'dev-ckpq75z3q4wg8nx8.eu.auth0.com',
     clientId: 'DQOC4pApdGuoQdzKbfgBZNkkH3VLSwIm',
     authorizationParams: {
-      redirect_uri: window.location.origin
+      redirect_uri: 'http://localhost:8100/alerts'
     }
   }
 };

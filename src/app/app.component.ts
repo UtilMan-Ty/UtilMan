@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     this.auth.isAuthenticated$.subscribe((isAuthenticated) => {
       if (isAuthenticated) {
         // User is authenticated, navigate to the main content or home page
-        this.router.navigate(['/alerts']); // Replace '/main' with your main content route
+        this.router.navigate(['/alerts']);
       } else {
         // If not authenticated, initiate the Auth0 login
         this.auth.loginWithRedirect();
